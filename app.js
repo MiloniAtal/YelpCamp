@@ -18,7 +18,7 @@ var express = require("express"),
 // seedB();
 
 
-mongoose.connect('mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
