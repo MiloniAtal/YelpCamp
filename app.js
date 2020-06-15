@@ -17,9 +17,16 @@ var express = require("express"),
 	seedB = require("./seeds");
 // seedB();
 
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/<dbname>?retryWrites=true&w=majority");
+
+mongoose.connect('mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+	useNewUrlParser: true,
+	useCreateIndex: true
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('ERROR:', err.message);
+});
+
 
 
 app.use(bodyParser.urlencoded({ extended: true}));
