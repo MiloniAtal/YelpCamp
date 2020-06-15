@@ -19,7 +19,7 @@ var express = require("express"),
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/<dbname>?retryWrites=true&w=majority");
 
 
 app.use(bodyParser.urlencoded({ extended: true}));
