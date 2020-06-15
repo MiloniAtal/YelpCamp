@@ -60,13 +60,8 @@ app.use(commentsRoute);
 app.use(campgroundRoute);
 
 
-
-
-
-
-
-
-
-app.listen(3000, function(){
-	console.log("serving on port 3000")
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+app.listen(port, host, function() {
+  console.log("Server started.......");
 });
