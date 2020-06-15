@@ -1,5 +1,4 @@
 var express = require("express"),
-	
 	app = express(),
 	bodyParser = require("body-parser"),
 	mongoose = require("mongoose"),
@@ -19,7 +18,7 @@ var express = require("express"),
 // seedB();
 
 
-mongoose.connect('mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Miloni:21Febru@ry@miloni-rz0by.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
